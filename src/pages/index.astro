@@ -1,0 +1,30 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HydrationServer from '../components/HydrationServer';
+import HydrationIdle from '../components/HydrationIdle';
+import HydrationOnly from '../components/HydrationOnly';
+import HydrationVisible from '../components/HydrationVisible';
+import PageLayout from '../components/PageLayout';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<head>
+	<!-- <link rel="stylesheet" href="../styles/global.css" > -->
+</head>
+<html lang="en">
+	<body>
+		<main>
+			<PageLayout title="Template Directives">
+				<HydrationServer />
+				<HydrationIdle client:idle />
+				<HydrationOnly client:only="react" />
+				<HydrationVisible client:visible />
+			</PageLayout>
+		</main>
+		<Footer />
+	</body>
+</html>
