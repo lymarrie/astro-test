@@ -1,28 +1,42 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import Header from '../components/Header';
 import Footer from '../components/Footer.astro';
 import HydrationServer from '../components/HydrationServer';
+import HydrationLoad from '../components/HydrationLoad';
 import HydrationIdle from '../components/HydrationIdle';
 import HydrationOnly from '../components/HydrationOnly';
 import HydrationVisible from '../components/HydrationVisible';
 import PageLayout from '../components/PageLayout';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
 <head>
-	<!-- <link rel="stylesheet" href="../styles/global.css" > -->
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
+
 <html lang="en">
 	<body>
+		<Header></Header>
 		<main>
-			<PageLayout title="Template Directives">
+			<PageLayout title="Hydration Directives">
+				<div class="section space-y-3">
+					<div>
+						These directives control how UI Framework components are hydrated on the page.
+					</div>
+					<div>
+						By default, a UI Framework component is not hydrated in the client. If no <span class="font-bold">client:*</span> directive is provided, its HTML is rendered onto the page without JavaScript.
+					</div>
+					<div>
+						A client directive can only be used on a UI framework component that is directly imported into a <span class="font-bold">.astro</span> component. Hydration directives are not supported when using dynamic tags and custom components passed via the components prop.
+					</div>
+				</div>
 				<HydrationServer />
+				<HydrationLoad client:load/>
+				<HydrationVisible client:visible />
 				<HydrationIdle client:idle />
 				<HydrationOnly client:only="react" />
-				<HydrationVisible client:visible />
 			</PageLayout>
 		</main>
 		<Footer />

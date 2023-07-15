@@ -11,7 +11,7 @@ export default function PageLayout({title, children}:PageLayoutProps) {
         <>
             <div className="centered-container">
                 <h1 className="text-4xl font-bold text-center">{title}</h1>
-                {children}
+                    {children}
             </div>
         </>
     );
