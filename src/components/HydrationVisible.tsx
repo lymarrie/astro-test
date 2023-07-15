@@ -8,7 +8,7 @@ export default function HydrationVisible() {
         <>
             <div className="hidden md:block">
                 <div className="section space-y-2 border-2 p-4 rounded-md drop-shadow-sm">
-                    <h2 className="text-2xl font-bold">Hydration Media</h2>
+                    <h2 className="text-2xl font-bold">client:visible</h2>
                     <div className="bg-gray-100 border-2 rounded-md p-4 space-y-2">
                         <div>
                             <span className="font-bold">Priority: </span>
