@@ -19,7 +19,7 @@ export default function HydrationIdle() {
                 </div>
                 <div className="bg-yellow-50 border-2 rounded-md p-4 space-y-2">
                     <h4 className="font-bold">Time</h4> 
-                    {today.toLocaleString()}; {today.getSeconds()} seconds, {today.getMilliseconds()} milliseconds
+                    {today.toLocaleString()}; {today.getMilliseconds()} milliseconds
                 </div>
             </div>
         </>
