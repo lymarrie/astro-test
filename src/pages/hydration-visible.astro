@@ -1,0 +1,54 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
+import Pokemon from '../components/Pokemon';
+import PageLayout from '../components/PageLayout';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+---
+
+
+
+<!DOCTYPE html>
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+
+<html lang="en">
+	<body>
+		<Header></Header>
+		<main>
+			<PageLayout title="Hydration Test">
+				<div class="section space-y-3">
+					<div>
+						These directives control how UI Framework components are hydrated on the page.
+					</div>
+				</div>
+				<div class="md:grid grid-cols-3 gap-5">
+					<Pokemon name="charizard" client:load></Pokemon>
+					<Pokemon name="blastoise" client:load></Pokemon>
+					<Pokemon name="venusaur" client:load></Pokemon>
+					<Pokemon name="dragonite" client:load></Pokemon>
+					<Pokemon name="gengar" client:load></Pokemon>
+					<Pokemon name="alakazam" client:load></Pokemon>
+				</div>
+				<div class="section bg-yellow-100 h-96 flex items-center justify-center">
+					<h3 class="text-3xl font-semibold">Below the viewport!</h3>
+				</div>
+				<div class="section bg-yellow-100 h-96 flex items-center justify-center">
+					<h3 class="text-3xl font-semibold">Below the viewport!</h3>
+				</div>
+				<div class="md:grid grid-cols-3 gap-5">
+					<Pokemon name="moltres" client:visible></Pokemon>
+					<Pokemon name="zapdos" client:visible></Pokemon>
+					<Pokemon name="articuno" client:visible></Pokemon>
+					<Pokemon name="ho-oh" client:visible></Pokemon>
+					<Pokemon name="lugia" client:visible></Pokemon>
+					<Pokemon name="celebi" client:visible></Pokemon>
+				</div>
+			</PageLayout>
+		</main>
+		<Footer />
+	</body>
+</html>

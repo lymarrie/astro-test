@@ -5,7 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#" },
+  { name: "Hydration (All)", href: "/hydration-full" },
+  { name: "Hydration (Visible)", href: "/hydration-visible" },
 ];
 
 const Header = () => {

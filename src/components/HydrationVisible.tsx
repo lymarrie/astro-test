@@ -43,8 +43,7 @@ export default function HydrationVisible() {
     
     return (
         <>
-            <div className="hidden md:block">
-                <div className="section space-y-2 border-2 p-4 rounded-md drop-shadow-sm">
+            <div className="section space-y-2 border-2 p-4 rounded-md drop-shadow-sm">
                 <button
                     onClick={toggleComponentVisibility}
                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
@@ -67,7 +66,6 @@ export default function HydrationVisible() {
                             {today.toLocaleString()}; {today.getMilliseconds()} milliseconds
                         </div>
                     </div>
-                </div>
             </div>
         </>
     );
