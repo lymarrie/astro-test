@@ -161,6 +161,7 @@ const PokemonComponent: React.FC<PokemonComponentProps> = ({ name }) => {
                   width="125px"
                   height="125px"
                   alt={`Sprite ${index + 1}`}
+                  loading="lazy"
                   className="flex items-center justify-center" />
               </div>
             ))}
