@@ -7,6 +7,9 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Hydration (All)", href: "/hydration-full" },
   { name: "Hydration (Visible)", href: "/hydration-visible" },
+  { name: "Hydration (Server-side)", href: "/hydration-server-side" },
+  { name: "Banner Test (All)", href: "/hydration-full-banners" },
+  { name: "Banner Test (Visible)", href: "/hydration-visible-banners" },
 ];
 
 const Header = () => {
